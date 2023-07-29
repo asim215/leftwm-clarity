@@ -10,6 +10,10 @@ It have following features:
 ## Screenshots
 ![Screenshot](./theme_a/screenshots/screenshot1.png)
 
+![Screenshot](./theme_a/screenshots/screenshot2.png)
+
+![Screenshot](./theme_a/screenshots/screenshot3.png)
+
 ## Dependencies
  - leftwm
  - feh
