@@ -10,11 +10,11 @@ It have following features:
 - No space between windows, only borders highlighted on focus
 
 ## Screenshots
-![Screenshot](./theme_a/screenshots/screenshot1.png)
+![Screenshot](./clarity/screenshots/screenshot1.png)
 
-![Screenshot](./theme_a/screenshots/screenshot2.png)
+![Screenshot](./clarity/screenshots/screenshot2.png)
 
-![Screenshot](./theme_a/screenshots/screenshot3.png)
+![Screenshot](./clarity/screenshots/screenshot3.png)
 
 ## Dependencies
  - leftwm
