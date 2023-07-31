@@ -92,11 +92,22 @@
         (command: Execute, value: "loginctl kill-session $XDG_SESSION_ID", modifier: ["modkey", "Shift"], key: "x"),
         // Move window to last workspace
         (command: MoveToLastWorkspace, value: "", modifier: ["modkey", "Shift"], key: "w"),
+        // Swap
         (command: SwapTags, value: "", modifier: ["modkey"], key: "w"),
+        // (command: SwapScreens, value: "", modifier: ["modkey"], key: "a"),
+        // Rotate tag
+        (command: RotateTag, value: "", modifier: ["modkey"], key: "e"),
         // Move
         (command: MoveWindowUp, value: "", modifier: ["modkey", "Shift"], key: "k"),
         (command: MoveWindowDown, value: "", modifier: ["modkey", "Shift"], key: "j"),
-        (command: MoveWindowTop, value: "", modifier: ["modkey"], key: "f"),
+        // (command: MoveWindowTop, value: "", modifier: ["modkey"], key: "f"),
+        // Full screen
+        (command: ToggleFullScreen, value: "", modifier: ["modkey"], key: "f"),
+        // Floating window
+        (command: ToggleFloating, value: "", modifier: ["modkey"], key: "o"),
+        (command: ToggleSticky, value: "", modifier: ["modkey"], key: "s"),
+        //
+        (command: MoveWindowTop, value: "", modifier: ["modkey", "Shift"], key: "f"),
         (command: MoveWindowUp, value: "", modifier: ["modkey", "Shift"], key: "Up"),
         (command: MoveWindowDown, value: "", modifier: ["modkey", "Shift"], key: "Down"),
         // Focus
