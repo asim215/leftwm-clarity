@@ -9,8 +9,9 @@
 
 #![enable(implicit_some)]
 (
+    // Win key (modkey) - Mod4
+    // Alt key - Mod1
     modkey: "Mod4",
-    // altkey: "Mod1",
     mousekey: "Mod4",
     workspaces: [],
     tags: [
@@ -67,41 +68,55 @@
     sloppy_mouse_follows_focus: true,
     auto_derive_workspaces: true,
     keybind: [
-
+        // Execute
+        // Terminal
+        (command: Execute, value: "alacritty", modifier: ["modkey"], key: "Return"),
+        // Rofi
         (command: Execute, value: "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'", modifier: ["modkey"], key: "c"),
-        (command: Execute, value: "rofi -show p -modi p:rofi-power-menu", modifier: ["modkey"], key: "p"),
+        (command: Execute, value: "rofi -show p -modi p:'rofi-power-menu --no-symbols'", modifier: ["modkey"], key: "p"),
         (command: Execute, value: "rofi -show drun", modifier: ["modkey"], key: "d"),
         (command: Execute, value: "rofi -show run", modifier: ["modkey"], key: "r"),
         (command: Execute, value: "rofi -show window", modifier: ["modkey"], key: "t"),
-        (command: Execute, value: "alacritty", modifier: ["modkey"], key: "Return"),
+        // Lock screen
         // (command: Execute, value: "slock", modifier: ["modkey", "Control"], key: "l"),
         (command: Execute, value: "i3lock -c 000000", modifier: ["modkey", "Control"], key: "l"),
+        // Zellij
+        (command: Execute, value: "alacritty -e zellij", modifier: ["modkey"], key: "z"),
+        // Bottom monitor
+        (command: Execute, value: "alacritty -e btm", modifier: ["modkey"], key: "m"),
     //
         (command: CloseWindow, value: "", modifier: ["modkey"], key: "q"),
+        // Config Reload
         (command: SoftReload, value: "", modifier: ["modkey", "Control"], key: "r"),
+        // Kill Session
         (command: Execute, value: "loginctl kill-session $XDG_SESSION_ID", modifier: ["modkey", "Shift"], key: "x"),
+        // Move window to last workspace
         (command: MoveToLastWorkspace, value: "", modifier: ["modkey", "Shift"], key: "w"),
         (command: SwapTags, value: "", modifier: ["modkey"], key: "w"),
+        // Move
         (command: MoveWindowUp, value: "", modifier: ["modkey", "Shift"], key: "k"),
         (command: MoveWindowDown, value: "", modifier: ["modkey", "Shift"], key: "j"),
         (command: MoveWindowTop, value: "", modifier: ["modkey"], key: "f"),
-        (command: FocusWindowUp, value: "", modifier: ["modkey"], key: "k"),
-        (command: FocusWindowDown, value: "", modifier: ["modkey"], key: "j"),
-        // (command: NextLayout, value: "", modifier: ["modkey", "Control"], key: "k"),
-        (command: NextLayout, value: "", modifier: ["modkey"], key: "Tab"),
-        // (command: PreviousLayout, value: "", modifier: ["modkey", "Control"], key: "j"),
-        (command: PreviousLayout, value: "", modifier: ["modkey", "Shift"], key: "Tab"),
-        (command: FocusWorkspaceNext, value: "", modifier: ["modkey"], key: "l"),
-        (command: FocusWorkspacePrevious, value: "", modifier: ["modkey"], key: "h"),
         (command: MoveWindowUp, value: "", modifier: ["modkey", "Shift"], key: "Up"),
         (command: MoveWindowDown, value: "", modifier: ["modkey", "Shift"], key: "Down"),
+        // Focus
+        (command: FocusWorkspaceNext, value: "", modifier: ["modkey"], key: "l"),
+        (command: FocusWorkspacePrevious, value: "", modifier: ["modkey"], key: "h"),
+        (command: FocusWindowUp, value: "", modifier: ["modkey"], key: "k"),
+        (command: FocusWindowDown, value: "", modifier: ["modkey"], key: "j"),
         (command: FocusWindowUp, value: "", modifier: ["modkey"], key: "Up"),
         (command: FocusWindowDown, value: "", modifier: ["modkey"], key: "Down"),
-        (command: NextLayout, value: "", modifier: ["modkey", "Control"], key: "Up"),
-        (command: PreviousLayout, value: "", modifier: ["modkey", "Control"], key: "Down"),
         (command: FocusWorkspaceNext, value: "", modifier: ["modkey"], key: "Right"),
         (command: FocusWorkspaceNext, value: "", modifier: ["modkey"], key: "space"),
         (command: FocusWorkspacePrevious, value: "", modifier: ["modkey"], key: "Left"),
+        //
+        (command: NextLayout, value: "", modifier: ["modkey"], key: "Tab"),
+        (command: PreviousLayout, value: "", modifier: ["modkey", "Shift"], key: "Tab"),
+        (command: NextLayout, value: "", modifier: ["modkey", "Control"], key: "Up"),
+        (command: PreviousLayout, value: "", modifier: ["modkey", "Control"], key: "Down"),
+        // (command: NextLayout, value: "", modifier: ["modkey", "Control"], key: "k"),
+        // (command: PreviousLayout, value: "", modifier: ["modkey", "Control"], key: "j"),
+    //
         (command: GotoTag, value: "1", modifier: ["modkey"], key: "1"),
         (command: GotoTag, value: "2", modifier: ["modkey"], key: "2"),
         (command: GotoTag, value: "3", modifier: ["modkey"], key: "3"),
@@ -121,6 +136,7 @@
         (command: GotoTag, value: "17", modifier: ["Mod1"], key: "7"),
         (command: GotoTag, value: "18", modifier: ["Mod1"], key: "8"),
         (command: GotoTag, value: "19", modifier: ["Mod1"], key: "9"),
+    //
         (command: MoveToTag, value: "1", modifier: ["modkey", "Shift"], key: "1"),
         (command: MoveToTag, value: "2", modifier: ["modkey", "Shift"], key: "2"),
         (command: MoveToTag, value: "3", modifier: ["modkey", "Shift"], key: "3"),

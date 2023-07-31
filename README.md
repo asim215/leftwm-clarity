@@ -25,3 +25,6 @@ It have following features:
  - [rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
  - i3lock
  - alacritty
+ - zellij
+ - bottom
+
