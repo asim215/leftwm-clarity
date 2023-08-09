@@ -12,6 +12,8 @@ It have following features:
 
 ![Screenshot](./clarity/screenshots/screenshot2.png)
 
+![Screenshot](./clarity/screenshots/screenshot3.png)
+
 ## Installation
  1. Clone the repository.
  2. Put clarity directory into themes of `~/.config/leftwm/themes/`
